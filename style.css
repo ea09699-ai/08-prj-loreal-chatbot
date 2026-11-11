@@ -1,3 +1,158 @@
+/* ============================================================
+   L'Oréal Beauty Advisor
+   Palette: black + gold (L'Oréal Paris signature), red accent, warm ivory
+   Type: Bodoni Moda (stand-in for Bauer Bodoni) for display,
+         Josefin Sans (stand-in for ITC Avant Garde) for body
+   ============================================================ */
+
+:root {
+  --black: #000000;
+  --white: #ffffff;
+  --gold: #c9a45c;
+  --gold-deep: #a8873f;
+  --red: #c8102e;
+  --ivory: #faf7f2;
+  --line: #e7dfce;
+  --muted: #6b6b6b;
+}
+
+/* —— basic reset —— */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* —— body + fonts —— */
+body {
+  font-family: "Josefin Sans", Arial, Helvetica, sans-serif;
+  color: #222;
+  background: var(--ivory);
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.page-wrapper {
+  width: 92%;
+  max-width: 900px;
+}
+
+/* —— header / branding —— */
+.site-header {
+  margin-top: 32px;
+  padding: 36px 20px 30px;
+  text-align: center;
+  background: var(--black);
+  color: var(--white);
+  border-bottom: 4px solid var(--gold);
+}
+
+.logo {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 14px;
+}
+
+/* if you use the provided logo image */
+.logo img {
+  display: block;
+  height: 56px;
+  width: auto;
+  max-width: 100%;
+}
+
+/* text fallback logo */
+.logo-mark {
+  font-family: "Bodoni Moda", Georgia, serif;
+  font-weight: 700;
+  font-size: 44px;
+  letter-spacing: 0.12em;
+  color: var(--gold);
+  line-height: 1;
+}
+
+.logo-sub {
+  margin-top: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.6em;
+  padding-left: 0.6em;
+  color: var(--gold);
+}
+
+.tagline {
+  font-family: "Bodoni Moda", Georgia, serif;
+  font-style: italic;
+  font-size: 17px;
+  color: #e9e2d2;
+  margin-bottom: 18px;
+}
+
+.site-title {
+  font-family: "Bodoni Moda", Georgia, serif;
+  font-weight: 500;
+  font-size: 32px;
+  letter-spacing: 0.04em;
+  color: var(--white);
+}
+
+/* —— chat window —— */
+.chatbox {
+  margin: 28px 0 0;
+  padding: 24px;
+  background: var(--white);
+  border: 1px solid var(--line);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.06);
+}
+
+.chat-window {
+  height: 420px;
+  padding: 8px 6px 8px 0;
+  font-size: 17px;
+  line-height: 1.6;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  scrollbar-width: thin;
+  scrollbar-color: var(--gold) transparent;
+}
+
+/* —— messages and bubbles —— */
+.msg {
+  display: flex;
+}
+
+.msg.user {
+  justify-content: flex-end;
+}
+
+.msg.ai {
+  justify-content: flex-start;
+}
+
+.bubble {
+  max-width: 78%;
+  padding: 14px 18px;
+}
+
+.msg.user .bubble {
+  background: var(--black);
+  color: var(--white);
+  border-radius: 18px 18px 4px 18px;
+}
+
+.msg.ai .bubble {
+  background: var(--ivory);
+  color: #222;
+  border: 1px solid var(--line);
+  border-left: 4px solid var(--gold);
+  border-radius: 18px 18px 18px 4px;
+}
+
+
 .msg-label {
   display: block;
   margin-bottom: 4px;
@@ -110,5 +265,14 @@
   .logo-sub {
     letter-spacing: 0.42em;
     padding-left: 0.42em;
+  }
+  .logo-mark {
+    font-size: 34px;
+  }
+  .site-title {
+    font-size: 26px;
+  }
+  .chatbox {
+    padding: 16px;
   }
 }
