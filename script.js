@@ -87,3 +87,4 @@ function setBusy(isBusy) {
   sendBtn.disabled = isBusy;
   userInput.disabled = isBusy;
 }
+/* end of line */
